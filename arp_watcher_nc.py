@@ -11,4 +11,7 @@ ip_mac = {}
 def sig_int_handler( signum , frame):
     print("Got SIGINT. Saving ARP database...")
     try:
-        
+        f = open( arp_watcher_db_file , "w")
+
+        for (ip , mac) in ip_mac.items ():
+            f.write(ip + " " + mac + "\n")
