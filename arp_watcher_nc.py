@@ -18,3 +18,5 @@ def sig_int_handler( signum , frame):
 
         f.close()
         print("Done.")
+    except IOError:
+        print("Cannot write file " + arp_watcher_db_file)
