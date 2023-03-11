@@ -20,3 +20,9 @@ def sig_int_handler( signum , frame):
         print("Done.")
     except IOError:
         print("Cannot write file " + arp_watcher_db_file)
+
+    sys.exit(1)
+
+
+def watch_arp(pkt):
+    # got is -at pkt (ARP response)
