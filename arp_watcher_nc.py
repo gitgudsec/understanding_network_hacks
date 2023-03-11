@@ -15,3 +15,6 @@ def sig_int_handler( signum , frame):
 
         for (ip , mac) in ip_mac.items ():
             f.write(ip + " " + mac + "\n")
+
+        f.close()
+        print("Done.")
