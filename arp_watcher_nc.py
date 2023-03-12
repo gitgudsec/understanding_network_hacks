@@ -31,3 +31,7 @@ def watch_arp(pkt):
 
         # Device is new. Remember it.
         if ip_mac.get(pkt[ ARP].psrc) == None:
+            print("Found new device " + \
+                    pkt[ARP].hwsrc + " " + \
+                    pkt[ARP].psrc)
+            ip_mac[pkt[ARP].psrc] = pkt[ARP].hwsrc
