@@ -28,3 +28,6 @@ def watch_arp(pkt):
     # got is -at pkt (ARP response)
     if pkt[ARP].op == 2:
         print(pkt[ARP].hwsrc + " " + pkt[ARP].psrc)
+
+        # Device is new. Remember it.
+        if ip_mac.get(pkt[ ARP].psrc) == None:
