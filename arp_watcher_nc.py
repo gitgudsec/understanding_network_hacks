@@ -44,6 +44,7 @@ def watch_arp(pkt):
                     pkt[ARP].psrc + \
                     " (old " + ip_mac[pkt[ARP].psrc]
                     + ")")
+                ip_mac[pkt[ARP].psrc] = pkt[ARP].hwsrc
                       
                       
                       
