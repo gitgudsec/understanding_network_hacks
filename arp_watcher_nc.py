@@ -38,3 +38,5 @@ def watch_arp(pkt):
 
         # Device is known but has a different IP
         elif ip_mac.get(pkt[ ARP].psrc) and \
+            ip_mac[pkt[ARP].psrc] != pkt[ARP].hwsrc:
+                print(pkt[ARP].hwsrc + \
