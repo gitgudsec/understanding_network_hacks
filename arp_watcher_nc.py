@@ -26,3 +26,5 @@ def sig_int_handler( signum , frame):
 
 def watch_arp(pkt):
     # got is -at pkt (ARP response)
+    if pkt[ARP].op == 2:
+        print(pkt[ARP].hwsrc + " " + pkt[ARP].psrc)

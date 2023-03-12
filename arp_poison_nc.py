@@ -10,8 +10,8 @@ iface = sys.argv[3]
 
 ethernet = Ether()
 
-arp = ARP(pdst=target_ip ,
-        psrc=fake_ip ,
+arp = ARP(pdst=target_ip,
+        psrc=fake_ip,
         op="is-at")
 
 packet = ethernet / arp
