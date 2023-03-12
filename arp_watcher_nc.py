@@ -40,3 +40,10 @@ def watch_arp(pkt):
         elif ip_mac.get(pkt[ ARP].psrc) and \
             ip_mac[pkt[ARP].psrc] != pkt[ARP].hwsrc:
                 print(pkt[ARP].hwsrc + \
+                    " has got new ip " + \
+                    pkt[ARP].psrc + \
+                    " (old " + ip_mac[pkt[ARP].psrc]
+                    + ")")
+                      
+                      
+                      
