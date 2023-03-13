@@ -61,3 +61,5 @@ except IOError:
 
 for line in fh:
     line.chomp()
+    (ip , mac) = line.split (" ")
+    ip_mac[ip] = mac
