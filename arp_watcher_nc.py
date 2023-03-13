@@ -48,3 +48,7 @@ def watch_arp(pkt):
                       
                       
 signal(SIGINT , sig_int_handler)
+
+if len(sys.argv) < 2:
+    print(sys.argv[0] + " <iface >")
+    sys.exit(0)
