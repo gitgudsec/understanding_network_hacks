@@ -55,3 +55,6 @@ if len(sys.argv) < 2:
 
 try:
     fh = open( arp_watcher_db_file , "r")
+except IOError:
+    print("Cannot read file " + arp_watcher_db_file)
+    sys.exit(1)
