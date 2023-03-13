@@ -52,3 +52,6 @@ signal(SIGINT , sig_int_handler)
 if len(sys.argv) < 2:
     print(sys.argv[0] + " <iface >")
     sys.exit(0)
+
+try:
+    fh = open( arp_watcher_db_file , "r")
