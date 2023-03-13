@@ -63,3 +63,8 @@ for line in fh:
     line.chomp()
     (ip , mac) = line.split (" ")
     ip_mac[ip] = mac
+
+sniff(prn=watch_arp ,
+    filter="arp",
+    iface=sys.argv[1],
+    store=0)
