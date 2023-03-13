@@ -47,4 +47,4 @@ def watch_arp(pkt):
                 ip_mac[pkt[ARP].psrc] = pkt[ARP].hwsrc
                       
                       
-                      
+signal(SIGINT , sig_int_handler)
