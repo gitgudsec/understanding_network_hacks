@@ -58,3 +58,6 @@ try:
 except IOError:
     print("Cannot read file " + arp_watcher_db_file)
     sys.exit(1)
+
+for line in fh:
+    line.chomp()
