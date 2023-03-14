@@ -8,3 +8,6 @@ packet = Ether(src=RandMAC("*:*:*:*:*:*") ,
         IP(src=RandIP ("*.*.*.*") ,
            dst=RandIP ("*.*.*.*")) / \
         ICMP()
+
+if len(sys.argv) < 2:
+    dev = "enp3s0f1"
