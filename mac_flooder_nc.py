@@ -11,3 +11,5 @@ packet = Ether(src=RandMAC("*:*:*:*:*:*") ,
 
 if len(sys.argv) < 2:
     dev = "enp3s0f1"
+else:
+    dev = sys.argv[1]
