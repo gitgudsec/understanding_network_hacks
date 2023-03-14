@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import sys
-from scapy.all import *
+from scapy.all import Ether, IP, ICMP, RandMAC, RandIP, sendp
 
 packet = Ether(src=RandMAC("*:*:*:*:*:*") ,
                dst=RandMAC ("*:*:*:*:*:*")) / \
