@@ -2,3 +2,6 @@
 
 import sys
 from scapy.all import *
+
+packet = Ether(src=RandMAC("*:*:*:*:*:*") ,
+               dst=RandMAC ("*:*:*:*:*:*")) / \
