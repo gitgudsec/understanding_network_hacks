@@ -15,3 +15,4 @@ else:
     dev = sys.argv[1]
 
 print("Flooding net with random packets on dev " + dev)
+sendp(packet , iface=dev , loop=1)
