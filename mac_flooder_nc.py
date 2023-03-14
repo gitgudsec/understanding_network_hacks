@@ -5,3 +5,5 @@ from scapy.all import *
 
 packet = Ether(src=RandMAC("*:*:*:*:*:*") ,
                dst=RandMAC ("*:*:*:*:*:*")) / \
+        IP(src=RandIP ("*.*.*.*") ,
+           dst=RandIP ("*.*.*.*")) / \
